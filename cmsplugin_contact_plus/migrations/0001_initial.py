@@ -60,7 +60,7 @@ class Migration(migrations.Migration):
                 ('initial', models.CharField(max_length=250, null=True, verbose_name='Inital Value', blank=True)),
                 ('required', models.BooleanField(default=True, verbose_name='Mandatory field')),
                 ('widget', models.CharField(help_text='Will be ignored in the current version.', max_length=250, null=True, verbose_name='Widget', blank=True)),
-                ('form', models.ForeignKey(verbose_name='Contact Form', to='cmsplugin_contact_plus.ContactPlus'), on_delete=models.CASCADE),
+                ('form', models.ForeignKey(verbose_name='Contact Form', to='cmsplugin_contact_plus.ContactPlus', on_delete=models.CASCADE)),
             ],
             options={
                 'ordering': ('inline_ordering_position',),
